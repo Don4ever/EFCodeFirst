@@ -9,6 +9,7 @@ namespace EFCodeFirst.Controllers
 {
     public class blogController : Controller
     {
+        private BlogContext db = new BlogContext();
         // GET: blog
         public ActionResult Index()
         {
@@ -17,11 +18,19 @@ namespace EFCodeFirst.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            List<Blog> b = db.BlogsTable.ToList();
+            return View(b);
         }
         [HttpPost]
-        public ActionResult Create(Blog blog)
+        public ActionResult Create(Blog bl)
         {
+            db.BlogsTable.Add(bl);
+            db.SaveChanges();
+
+
+            List<Blog> b = db.BlogsTable.ToList();
+            return View(b);
+
             return View();
         }
     }

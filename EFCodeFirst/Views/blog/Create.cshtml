@@ -1,4 +1,4 @@
-﻿
+﻿@model IList<EFCodeFirst.Models.Blog>
 @{
     ViewBag.Title = "Create";
 }
@@ -10,3 +10,16 @@
     <input type="submit" value="Add New" />
 
 </form>
+
+
+<div>
+    <ul>
+        @foreach (var itm in Model)
+        {
+            <li>
+                @itm.Name
+            </li>
+        }
+        
+    </ul>
+</div>
