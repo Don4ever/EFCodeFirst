@@ -17,7 +17,13 @@ namespace EFCodeFirst.Controllers
             List<Post> lstPs = db.PostsTable.ToList();
             return View(lstPs);
         }
+        [HttpGet] // by default
         public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Post pst)
         {
             return View();
         }
