@@ -1,0 +1,20 @@
+﻿@model IEnumerable<EFCodeFirst.Models.Author> 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Authors</h2>
+
+<ul>
+
+    @foreach(var itm in Model)
+    {
+        <li>
+            @itm.auth_name
+
+        </li>
+    }
+
+</ul>
+
+<a href="@Url.Action( "Create","author")">Add an Author</a>

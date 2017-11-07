@@ -10,6 +10,7 @@ namespace EFCodeFirst.Models
     {
         [Key]
         public int Auth_id { get; set; }
+        [Required]
         public String auth_name { get; set; }
 
         public virtual IList<Post> posts { get; set; }
