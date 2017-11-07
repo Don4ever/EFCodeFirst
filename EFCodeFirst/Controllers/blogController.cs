@@ -31,7 +31,16 @@ namespace EFCodeFirst.Controllers
             List<Blog> b = db.BlogsTable.ToList();
             return View(b);
 
-            return View();
+            
+        }
+
+        public ActionResult delBlog (int id)
+        {
+            Blog bg = new Blog();
+            bg = db.BlogsTable.Find(id);
+            db.BlogsTable.Remove(bg);
+            db.SaveChanges();
+            return View("Create",db.BlogsTable.ToList());
         }
     }
 }

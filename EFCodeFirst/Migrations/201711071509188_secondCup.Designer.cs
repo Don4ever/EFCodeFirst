@@ -7,13 +7,13 @@ namespace EFCodeFirst.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class firstMigration : IMigrationMetadata
+    public sealed partial class secondCup : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(firstMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(secondCup));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711061400396_firstMigration"; }
+            get { return "201711071509188_secondCup"; }
         }
         
         string IMigrationMetadata.Source

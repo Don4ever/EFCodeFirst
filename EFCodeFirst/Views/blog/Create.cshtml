@@ -13,13 +13,23 @@
 
 
 <div>
-    <ul>
-        @foreach (var itm in Model)
-        {
-            <li>
-                @itm.Name <button>Delete</button>
-            </li>
-        }
-        
-    </ul>
+    <table>@foreach (var itm in Model)
+    {
+        <tr>
+
+            <td>
+                
+                   
+                        @itm.Name 
+                    
+                
+            </td>
+            <td>
+                <a href="@Url.Action( "delBlog","Blog", new {id = itm.BlogId })">Delete</a>
+            </td>
+        </tr>
+
+
+    }</table>
+  
 </div>
