@@ -21,6 +21,7 @@ namespace EFCodeFirst.Models
         //Keep in mind that dbcontext is a collection of DbSet
         //here we have two DbSet the first one is of type Blog and we called it BlogsTable
         public DbSet<Blog> BlogsTable { get; set; }
+        public DbSet<Author> AuthorsTable { get; set; }
         public DbSet<Post> PostsTable { get; set; }
     }
 }
