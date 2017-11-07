@@ -209,6 +209,7 @@
     <Content Include="Views\blog\Create.cshtml" />
     <Content Include="Views\author\Index.cshtml" />
     <Content Include="Views\author\Create.cshtml" />
+    <Content Include="Views\blog\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
